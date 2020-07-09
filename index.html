@@ -12,10 +12,21 @@
     <title>My Todolist App</title>
 </head>
 
+<style>
+    th{
+        text-align: center;
+        
+    }
+    tr{
+        border-width: 3;
+        border-color: black;
+    }
+</style>
+
 <body>
-    <div class="container">
-        <h1 class=" text-center display-4">
-            <i class="fas fa-list-ul text-success"></i>
+    <div class="container" style="background-color:#E4E4E4; background-image: linear-gradient(#E4E4E4, rgb(177, 188, 219));" >
+        <h1 class=" text-center display-4" >
+            <i class="fas fa-clipboard-list" style="color:#39a831;"\></i>
             My ToDo List
         </h1>
         <form id="todo-form" class="m-3">
@@ -35,15 +46,15 @@
                 <label for="date">Expected Date</label>
                 <input type="datetime-local" id="date" class="form-control">
             </div>
-            <input type="submit" value="Add Todo" class="btn btn-block" style="background-color:darkgrey;">
+            <input type="submit" value="Add Todo" class="btn btn-block submitEdit" style="background-color:darkgrey; border-radius: 10px;">
         </form>
-        <table class="table table-striped mt-5">
-            <thead>
+        <table class="table table-bordered table-hover mt-5">
+            <thead id="table-head">
                 <tr>
                     <th>Task Id</th>
                     <th>Task</th>
                     <th>Description</th>
-                    <th>Priority</th>
+                    <th>Priority  <i class="fas fa-sort btn"></i></th>
                     <th>Expected Date</th>
                     <th>Actions</th>
                 </tr>
